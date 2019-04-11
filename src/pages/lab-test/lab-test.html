@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title>Lab Test</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Lab Test
+    </ion-card-header>
+    <ion-list>
+      <button (click)="openPage('Blood')" ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Blood Test Result
+      </button>
+
+      <button ion-item (click)="openPage('hos')">
+        <ion-icon name="medical" item-start></ion-icon>
+        Hospital
+      </button>
+    </ion-list>
+  </ion-card>
+</ion-content>

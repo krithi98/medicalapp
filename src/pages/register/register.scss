@@ -1,0 +1,76 @@
+page-register {
+  .content-md {
+    background: rgba(255, 255, 255, 0) !important;
+  }
+
+  button {
+    // margin-left: 24px !important;
+    // text-transform: none !important;
+    // color: rgb(255, 255, 255) !important;
+    // border-radius: 50px !important;
+    height: 40px !important;
+  }
+
+  ion-item {
+    background: rgba(255, 255, 255, 0) !important;
+    margin-bottom: 10% !important;
+    border: 2px solid white !important;
+    // border-radius: 50px;
+  }
+  ion-input {
+    text-align: center !important;
+    color: #fff;
+  }
+
+  .head {
+    padding: 0% 0% 10% 0%;
+    .title {
+      font-size: 40px;
+      // padding-left: 24px;
+    }
+    .subtitle {
+      font-size: 24px;
+      // padding-left: 24px;
+    }
+  }
+  //   .login-content {
+  //   background: #56CA96;
+
+  //   .login-box {
+  //     background: #509287;
+  //     padding: 20px 20px 0px 20px;
+  //     margin-top: 30px;
+  //   }
+
+  //   ion-row {
+  //      align-items: center;
+  //      text-align: center;
+  //    }
+
+  //    ion-item {
+  //        border-radius: 30px !important;
+  //        padding-left: 30px !important;
+  //        font-size: 0.9em;
+  //        margin-bottom: 10px;
+  //        border: 1px solid #ffffff;
+  //        border-bottom: 0px !important;
+  //        box-shadow: none !important;
+  //    }
+
+  //    .signup-col {
+  //      margin: 0px 16px 0px 16px;
+  //      padding-bottom: 20px;
+  //    }
+
+  //    .item-inner {
+  //      border-bottom-color: #ffffff !important;
+  //      box-shadow: none !important;
+  //    }
+
+  //    .submit-btn {
+  //      background: #51CFB1;
+  //      border-radius: 30px !important;
+  //      border: 1px solid #ffffff;
+  //    }
+  // }
+}

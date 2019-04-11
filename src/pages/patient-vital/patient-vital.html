@@ -1,0 +1,75 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title>Patient Vital</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="person" item-start></ion-icon>
+      Name
+      <h4 item-end>{{patientDetails?.fullname}}</h4>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="person" item-start></ion-icon>
+      Age
+      <ion-badge item-end>{{patientDetails1?.age}}</ion-badge>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="time" item-start></ion-icon>
+      Visited Time
+      <h4 item-end>{{patientDetails1?.last_visit | date: "yyyy/MM/dd HH:mm"}}</h4>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="egg" item-start></ion-icon>
+      Blood Pressure
+      <h4 item-end>{{patientDetails1?.bp}}</h4>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="thermometer" item-start></ion-icon>
+      Temperature
+      <h4 item-end>{{patientDetails1?.tempratore}}</h4>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="person" item-start></ion-icon>
+      Weight
+      <h4 item-end>{{patientDetails1?.weight}}Kg</h4>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="person" item-start></ion-icon>
+      Height
+      <h4 item-end>{{patientDetails1?.height}}</h4>
+    </ion-item>
+  </ion-list>
+  <div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>Need to update My details</p>
+    <ion-buttons (click)="updateVital()" end>
+      <button ion-button icon-end color="royal">
+        Go
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

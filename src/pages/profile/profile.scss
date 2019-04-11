@@ -1,0 +1,22 @@
+page-profile {
+    .content-md {
+      background: linear-gradient(to top, #fe5196 0%, #f77062 100%) !important;
+    }
+    .profile-image-wrapper {
+      text-align: center;
+      .profile-image-placeholder {
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        border-radius: 42%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        img {
+          height: 130px;
+          width: 130px;
+          border-radius: 42%;
+        }
+      }
+    }
+  }
+  

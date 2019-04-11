@@ -1,0 +1,77 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card (click)="openPage('blood')">
+    <img src="assets/imgs/blood.jpg" />
+    <ion-card-content>
+      <ion-card-title>
+        Blood Test
+      </ion-card-title>
+      <p>
+        A blood test is a laboratory analysis performed on a blood sample that is usually extracted from a vein in the
+        arm using a hypodermic needle, or via fingerprick.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-right>
+        <button (click)="openPage('blood')" ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Go
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card (click)="openPage('pre')">
+    <img src="assets/imgs/prescription.png" />
+    <ion-card-content>
+      <ion-card-title>
+        Medical prescription
+      </ion-card-title>
+      <p>
+        A prescription is a health-care program implemented by a physician or other qualified health care practitioner
+        in the form of instructions that govern the plan of care for an individual patient.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-right>
+        <button (click)="openPage('pre')" ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Go
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card (click)="openPage('app')">
+    <img src="assets/imgs/app.png" />
+    <ion-card-content>
+      <ion-card-title>
+        Appointment
+      </ion-card-title>
+      <p>
+        An arrangement to meet someone at a particular time and place.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-right>
+        <button (click)="openPage('app')" ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Go
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+</ion-content>

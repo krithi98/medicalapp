@@ -1,0 +1,75 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title>Patient Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #patientForm="ngForm">
+    <ion-row>
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" disabled name="name" [(ngModel)]="baseDetails.fullname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" disabled name="email" [(ngModel)]="baseDetails.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Mobile</ion-label>
+        <ion-input type="text" disabled name="mobile" [(ngModel)]="baseDetails.mobile"></ion-input>
+      </ion-item>
+      <ng-container *ngIf="isShow">
+      <ion-item>
+        <ion-label floating>Age</ion-label>
+        <ion-input type="text" name="age" [(ngModel)]="patientDetails.age"></ion-input>
+      </ion-item>
+      <!-- <div>{{patientDetails  json }}</div> -->
+      <ion-item>
+        <ion-label floating>Gender</ion-label>
+        <ion-select name="sex" [(ngModel)]="patientDetails.sex">
+          <ion-option value="0">Female</ion-option>
+          <ion-option value="1">Male</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Blood Pressure</ion-label>
+        <ion-input type="text" name="bp" [(ngModel)]="patientDetails.bp"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Sugar</ion-label>
+        <ion-input type="text" name="sugar" [(ngModel)]="patientDetails.sugar"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Tempratore</ion-label>
+        <ion-input type="text" name="tempratore" [(ngModel)]="patientDetails.tempratore"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Height</ion-label>
+        <ion-input type="text" name="height" [(ngModel)]="patientDetails.height"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Weight</ion-label>
+        <ion-input type="text" name="weight" [(ngModel)]="patientDetails.weight"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Visit</ion-label>
+        <ion-datetime name="last_visit" displayFormat="MMM DD, YYYY HH:mm" pickerFormat="MMM DD, YYYY HH:mm"
+          [(ngModel)]="patientDetails.last_visit"></ion-datetime>
+        <!-- <ion-input type="text" name="last_visit" [(ngModel)]="patientDetails.last_visit"></ion-input> -->
+      </ion-item>
+    </ng-container>
+    </ion-row>
+    <ion-row *ngIf="isEdit">
+      <ion-col class="signup-col">
+        <button *ngIf="!patientDetails.id" ion-button class="submit-btn" full type="submit"
+          [disabled]="!patientForm.form.valid" (click)="updateDetails()">Create</button>
+        <button *ngIf="patientDetails.id" ion-button class="submit-btn" full type="submit"
+          [disabled]="!patientForm.form.valid" (click)="updateDetails()">Update</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

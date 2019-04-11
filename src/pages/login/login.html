@@ -1,0 +1,62 @@
+<ion-content padding>
+  <div class="head">
+    <div class="title">Welcome</div>
+    <div class="subtitle">Sign in to continue
+    </div>
+  </div>
+  <ion-item no-lines>
+    <ion-input type="text" placeholder="Username" [(ngModel)]="loginData.username"></ion-input>
+  </ion-item>
+  <ion-item no-lines>
+    <ion-input type="password" placeholder="Password" [(ngModel)]="loginData.password"></ion-input>
+  </ion-item>
+  <button color="app-button" ion-button (click)="login()" round outline>
+    Login
+    <ion-icon padding-left md="ios-arrow-forward"></ion-icon>
+  </button>
+  <button color="app-button" ion-button (click)="register()" round outline>
+    Register
+    <ion-icon padding-left md="ios-arrow-forward"></ion-icon>
+  </button>
+  <div> </div>
+</ion-content>
+<!-- <ion-content class="login-content" padding>
+  <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <img src="http://placehold.it/300x200" />
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <div class="login-box">
+    <form #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+
+            <ion-item>
+              <ion-input type="text" placeholder="Email or Fullname" name="username" [(ngModel)]="loginData.username"
+                required>
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="loginData.password"
+                required></ion-input>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid"
+            (click)="login()">Login</button>
+          <button ion-button class="register-btn" block clear (click)="register()">Create New Account</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </div>
+</ion-content> -->

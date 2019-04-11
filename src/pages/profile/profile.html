@@ -1,0 +1,37 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div class="profile-image-wrapper" margin-bottom>
+
+      <div class="profile-image-placeholder">
+        <img src="/assets/imgs/pat.png">
+
+      </div>
+    </div>
+  </ion-card>
+  <div padding text-center>
+    <h4>Name</h4>
+    <h5>{{patientDetails.fullname}}</h5>
+  </div>
+  <div padding text-center>
+    <h4>Mobile</h4>
+    <h5>{{patientDetails.mobile}}</h5>
+  </div>
+  <div padding text-center>
+    <h4>Email</h4>
+    <h5>{{patientDetails.email}}</h5>
+  </div>
+  <!-- <div padding text-center>
+    <h4>Address</h4>
+    <h5>{{patientDetails.address}}</h5>
+  </div> -->
+
+</ion-content>

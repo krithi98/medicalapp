@@ -1,0 +1,7 @@
+{
+  "name": "psg_hos",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

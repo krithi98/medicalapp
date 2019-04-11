@@ -1,0 +1,57 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title>Appointment Booking</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <div class="show" *ngIf="!isAdd">
+    <ion-card *ngFor="let app of appoinments">
+      <ion-card-header>
+        {{app.reason}}
+      </ion-card-header>
+      <ion-card-content>
+          {{app.doctor}}
+        <br>
+        Visited At {{app.created_at | date: "yyyy/MM/dd HH:mm"}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="add" *ngIf="isAdd">
+    <form #patientForm="ngForm">
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Reason</ion-label>
+          <ion-input type="text" name="rason" [(ngModel)]="appointment.reason" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Date</ion-label>
+          <ion-datetime name="date" displayFormat="MMM DD, YYYY HH:mm" pickerFormat="MMM DD, YYYY HH:mm"
+            [(ngModel)]="appointment.date" required></ion-datetime>
+          <!-- <ion-input type="text" name="last_visit" [(ngModel)]="patientDetails.last_visit"></ion-input> -->
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!patientForm.form.valid"
+            (click)="addApp()">Create</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <h6>Book Appointment</h6>
+    <ion-buttons (click)="isAdd=!isAdd" end>
+      <button ion-button icon-end color="royal">
+        Click Here
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

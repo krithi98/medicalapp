@@ -1,0 +1,73 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title>Prescription</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="!isAdd" class="show">
+    <ion-card *ngFor="let medi of allMedicin">
+      <ion-card-content>
+        <ion-card-title>
+          {{medi.medican}}
+        </ion-card-title>
+        <p>
+          {{medi.desc}}
+        </p>
+      </ion-card-content>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear color="secondary" icon-start>
+            <ion-icon name='basket' color="secondary"></ion-icon>
+            <ion-badge item-end>{{medi.qty}}</ion-badge>
+          </button>
+        </ion-col>
+        <ion-col text-center>
+          <!-- <button (click)="deletePres(medi.id)" ion-button clear small color="danger" icon-start>
+            <ion-icon name='trash'></ion-icon>
+            Delete
+          </button> -->
+        </ion-col>
+
+      </ion-row>
+    </ion-card>
+  </div>
+  <div class="add" *ngIf="isAdd">
+    <form #patientForm="ngForm">
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Madicin</ion-label>
+          <ion-input type="text" name="medican" [(ngModel)]="medi.medican" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Quantity</ion-label>
+          <ion-input type="text" name="qty" [(ngModel)]="medi.qty" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Description</ion-label>
+          <ion-input type="text" name="desc" [(ngModel)]="medi.desc" required></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" type="submit" [disabled]="!patientForm.form.valid"
+            (click)="addApp()">Add</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>
+<!--ion-footer>
+  <ion-toolbar>
+    <h6>Add Prescription</h6>
+    <ion-buttons (click)="isAdd=!isAdd" end>
+       <button ion-button icon-end color="royal">
+        Click Here
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer-->

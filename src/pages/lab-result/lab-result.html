@@ -1,0 +1,106 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="resultType == 'Blood'">{{resultType}} Test Result</ion-title>
+    <ion-title *ngIf="resultType == 'hos'">About PSG</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid *ngIf="resultType == 'Blood'">
+    <ion-row>
+      <ion-col class="header" col-4>Section</ion-col>
+      <ion-col class="section" col-2>Normal</ion-col>
+      <ion-col class="section" col-2>AbNormal</ion-col>
+      <ion-col class="section" col-2>Flag</ion-col>
+      <ion-col class="section" col-2>Units</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>White Blood Cell (WBC)</ion-col>
+      <ion-col class="section" col-2>6.9</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>K/mcL</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Red Blood Cell (RBC)</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>1.8</ion-col>
+      <ion-col class="section" col-2>L</ion-col>
+      <ion-col class="section" col-2>K/mcL</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Hemoglobin (HB/Hgb))</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>6.5</ion-col>
+      <ion-col class="section" col-2>L**</ion-col>
+      <ion-col class="section" col-2>g/dL</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Hematocrit (HCT) </ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>19.5</ion-col>
+      <ion-col class="section" col-2>L**</ion-col>
+      <ion-col class="section" col-2>%</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Mean Cell Volume (MCV)</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>109.5</ion-col>
+      <ion-col class="section" col-2>H</ion-col>
+      <ion-col class="section" col-2>fl</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Mean Cell Hemoglobin (MCH)</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>36.5</ion-col>
+      <ion-col class="section" col-2> H</ion-col>
+      <ion-col class="section" col-2> pg</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Mean Cell Hb Conc (MCHC)</ion-col>
+      <ion-col class="section" col-2>33.3</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>g/dL</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Red Cell Dist Width (RDW)</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>16.0</ion-col>
+      <ion-col class="section" col-2> H </ion-col>
+      <ion-col class="section" col-2>%</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Platelet count</ion-col>
+      <ion-col class="section" col-2>180</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>K/mcL</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="header" col-4>Mean Platelet Volume</ion-col>
+      <ion-col class="section" col-2>7.9</ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2></ion-col>
+      <ion-col class="section" col-2>fL</ion-col>
+    </ion-row>
+    <p>
+      Flag Key: L= Abnormal Low, H= Abnormal High, **= critical value
+      Comment: **Hgb of 6.5 and Hct of 19.5 reported to Dr. J Smith at 15:20 on 2/10/14 by M. Peters
+    </p>
+  </ion-grid>
+
+<ng-container *ngIf="resultType == 'hos'">
+  <ion-card>
+  <ion-card-header>
+    PSG Institutions
+  </ion-card-header>
+  <ion-card-content>
+    PSG is a 92 years legacy in education and industry in our country. Testimony to the fact is the alumni spread across the nation, so also across the length and breadth of the globe. The PSG group of institutions specializes in providing comprehensive learning in a variety of academic fields’ right from Arts and Sciences to Engineering and from Medicine to Management. With nearly 1000 strong teaching staff and up to 16000 students under its wing, PSG has been constantly breaking barriers in education.
+  </ion-card-content>
+</ion-card>
+</ng-container>
+
+</ion-content>

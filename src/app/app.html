@@ -1,0 +1,50 @@
+<!-- <ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+      <button menuClose ion-item (click)="logout()">
+        Logout
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav> -->
+
+
+<ion-menu id="menu" [content]="content" padding-vertical>
+  <ion-content no-padding>
+    <ion-list no-lines>
+      <ion-item menuClose>
+        <!-- <div class="menu-avatar">
+                  <ion-avatar>
+                      <img  src="https://via.placeholder.com/100x100">
+                  </ion-avatar>
+              </div> -->
+        <div class="profile-wrapper">
+          <img src="" class="image">
+        </div>
+      </ion-item>
+      <h6 padding-bottom no-margin>PSG E-Health Care</h6>
+      <hr />
+    </ion-list>
+    <button (click)="openPage(page)" no-lines ion-item menuClose *ngFor="let page of pages">
+      <ion-icon color="app-button" item-start [name]="page?.icon"></ion-icon>
+      {{page.title}}
+    </button>
+    <button (click)="logout()" no-lines ion-item menuClose>
+      <ion-icon color="app-button" item-start name="log-out"></ion-icon>
+      Logout
+    </button>
+  </ion-content>
+</ion-menu>
+
+<ion-nav class="background" [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>

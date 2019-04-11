@@ -1,0 +1,49 @@
+<ion-header no-border>
+  <ion-navbar color="app-header">
+    <button ion-button menuToggle>
+      <ion-icon color="dark" name="menu"></ion-icon>
+    </button>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-content" padding>
+  <div class="head">
+    <div class="title">Welcome</div>
+    <div class="subtitle">Register in to continue</div>
+  </div>
+  <div class="login-box">
+    <form #registerForm="ngForm">
+      <ion-row>
+        <ion-item>sss
+          <ion-input type="text" name="name" placeholder="Name" [(ngModel)]="user.fullname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" name="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" name="mobile" placeholder="Mobile" [(ngModel)]="user.mobile"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <!-- <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid"
+            (click)="register()">Register</button>
+        </ion-col> -->
+       
+        <button *ngIf="isAct" color="app-button" [disabled]="!registerForm.form.valid" ion-button (click)="register()" outline>
+          Get Started
+          <ion-icon padding-left md="ios-arrow-forward"></ion-icon>
+        </button>
+                <button *ngIf="!isAct" color="app-button" [disabled]="true" ion-button (click)="register()" outline>
+          Get Started
+          <ion-icon padding-left md="ios-arrow-forward"></ion-icon>
+        </button>
+      </ion-row>
+    </form>
+  </div>
+
+</ion-content>
